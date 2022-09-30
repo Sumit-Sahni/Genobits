@@ -2,12 +2,13 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const dotenv = require('dotenv');
+const bodyParser = require('body-parser');
 const path = require('path');
+const Adding = require("./routes/addingRoutes")
 
 //  <!All Imported File >
 const connectDB = require('./config/db');
-const Division = require('./models/ShopModel')
-
+const Division =  require('./models/DivisionModel');
 dotenv.config();
 connectDB();
 app.use(express.json());
@@ -17,27 +18,12 @@ app.use(cors({
 }));
 
 
+app.use(bodyParser.urlencoded({ extended: false })); 
+app.use('/public', express.static(path.join(__dirname, 'public')));
 
-app.post('/create', async(req, res) => {
-    const {  DivisionName,  Incharge, InchargeEmail, TotalEmployee} = req.body
 
-    const division = await Division.create({
-        divisionName: DivisionName,
-        incharge:Incharge,
-        inchargeEmail:InchargeEmail,
-        totalEmployee:TotalEmployee
-   });
+app.use("/api", Adding);
 
-   console.log(division);
-   res.send(division);
-})
-
-app.get('/alldivision',async(req, res) => {
-    const data = await Division.find();
-     console.log({data});  
-     res.send(data);  
-
-})
 
 
 // _________________________________Deployment to Heroku________________________________________
@@ -60,5 +46,5 @@ res.send("API is running");
 
 const PORT = process.env.PORT
 app.listen(PORT, ()=>{
-    console.log('Server is running on port 9000');
+    console.log('Server is running on port 5000');
 })

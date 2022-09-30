@@ -13,8 +13,9 @@ import { CgLogOut } from 'react-icons/cg';
                     <h1 className='text-xl md:text-4xl font-extrabold'>CAIT</h1>
                     <p className='text-xl font-bold'>EDUSYS PVt. Ltd</p>
                  </div>
-                 <div className=' flex items-center px-4  w-48 '>
-                    <CgMenuGridO size={20}/>
+                 <div className=' flex items-center px-4  py-2 w-48  text-orange-500 shadow-lg shadow-black-500/50  self-start'>
+                  <div className='bg-orange-500 h-full w-1  '></div>
+                    <CgMenuGridO size={20} style={{"marginLeft":"6px"}}/>
                     <h1 className='mx-2 md:text-xl'>My Apps</h1>
                  </div>
                  <div  className=' flex items-center px-4  w-48 lg:my-6'>
