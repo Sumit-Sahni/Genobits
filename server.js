@@ -8,7 +8,6 @@ const Adding = require("./routes/addingRoutes")
 
 //  <!All Imported File >
 const connectDB = require('./config/db');
-const Division =  require('./models/DivisionModel');
 dotenv.config();
 connectDB();
 app.use(express.json());

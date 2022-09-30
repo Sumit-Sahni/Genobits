@@ -3,9 +3,9 @@ const Schema  = mongoose.Schema;
 
 const divisionSchema = new Schema({
 
-  Name: {
-        type: String,
-        required: true,   
+  divName: {
+       type:String,
+       required: true,
     },
 
     incharge: {

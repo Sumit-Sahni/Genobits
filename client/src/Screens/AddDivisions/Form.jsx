@@ -33,6 +33,7 @@ const Form = ({visible, close}) => {
               );
               console.log(data)
               alert("Added")
+              window.location.reload()
         } catch (error) {
             console.log(error)
         }
@@ -47,7 +48,7 @@ const Form = ({visible, close}) => {
     <div className='fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center'>
                <div className='w-full h-[27rem] md:w-4/5 md:h-[19rem] relative'>
                 <AiOutlineCloseSquare onClick={close} size={40} className='text-white absolute right-12 top-[-2.5rem]  cursor-pointer'></AiOutlineCloseSquare>
-                    <div className='w-full mx-auto  bg-slate-50 h-full rounded-2xl'>
+                    <div className='w-[90%] mx-auto  bg-slate-50 h-[105%] rounded-2xl'>
                           <div className='text-xl px-4 py-4' ><h1>Add New Division</h1></div>
                           <hr/>
                           <form className='px-4 py-2' onSubmit={SubmitHandler}>
@@ -55,7 +56,7 @@ const Form = ({visible, close}) => {
                               <input
                                  type="text"
                                  placeholder='Division Name'
-                                 className='w-48 p-2 rounded-xl bg-indigo-200 text-white '
+                                 className='w-48 p-2 rounded-xl bg-indigo-200  '
                                  onChange={(e)=>setDivisionName(e.target.value)}
                                  value={DivisionName}
                                /><br/>
@@ -66,7 +67,7 @@ const Form = ({visible, close}) => {
                                             <input
                                                type="text"
                                                placeholder='Incgarge'
-                                               className='w-48 p-2 rounded-xl bg-indigo-200 text-white '
+                                               className='w-48 p-2 rounded-xl bg-indigo-200  '
                                                onChange={(e)=>setIncharge(e.target.value)}
                                                value={Incharge}
                                              />
@@ -77,7 +78,7 @@ const Form = ({visible, close}) => {
                                             <input
                                                type="email"
                                                placeholder='Enter E-mail ID'
-                                               className='w-48 p-2 rounded-xl bg-indigo-200 text-white '
+                                               className='w-48 p-2 rounded-xl bg-indigo-200  '
                                                onChange={(e)=>setInchargeEmail(e.target.value)}
                                                value={InchargeEmail}
                                              />
@@ -89,7 +90,7 @@ const Form = ({visible, close}) => {
                                             <input
                                                type="number"
                                                placeholder='Number'
-                                               className='w-48 p-2 rounded-xl bg-indigo-200 text-white z-10'
+                                               className='w-48 p-2 rounded-xl bg-indigo-200  z-10'
                                                onChange={(e)=> setTotalEmployee(e.target.value)}
                                                value={TotalEmployee}
                                              />

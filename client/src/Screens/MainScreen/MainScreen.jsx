@@ -36,13 +36,6 @@ const MainScreen = () => {
                       <div className=' grid lg:grid-cols-7 bg-blue-100'>
                           <div className='lg:w-full  col-span-4 h-auto flex flex-wrap gap-6 p-4 '>
                             <Alldivisions/>
-                            <Alldivisions/>
-                            <Alldivisions/>
-                            <Alldivisions/>
-                            <Alldivisions/>
-                            <Alldivisions/>
-                            <Alldivisions/>
-                            <Alldivisions/>
                           </div>
                           <div className='lg:w-full  col-span-2 flex justify-center '>
                                <AdddDivision/>
